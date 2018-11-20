@@ -1,4 +1,5 @@
 import datetime
+import logging
 import os
 
 # 默认基本配置
@@ -46,6 +47,11 @@ DOWNLOADER_MIDDLEWARES = {
 #     # 日志等级 debug、error
 #     LOG_LEVEL = 'ERROR'
 #
+now = datetime.datetime.now()
+LOG_FILE_PATH = os.path.join(BASE_DIR, 'log/scrapy_{}_{}_{}.log'.format(now.year, now.month, now.day))
+LOG_FILE = LOG_FILE_PATH
+# 日志等级 debug、error
+LOG_LEVEL = 'INFO'
 DOWNLOAD_DELAY = 1
 #
 # # 线程数量

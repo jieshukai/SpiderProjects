@@ -1,0 +1,35 @@
+2018-11-20 15:03:29 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: Tripadvisor2)
+2018-11-20 15:03:29 [scrapy.utils.log] INFO: Versions: lxml 4.2.4.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 17:00:18) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Windows-10-10.0.17134-SP0
+2018-11-20 15:03:29 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'Tripadvisor2', 'COMMANDS_MODULE': 'Tripadvisor2.conf.task', 'CONCURRENT_REQUESTS': 32, 'DOWNLOAD_DELAY': 1, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'C:\\Users\\jieshukai\\Desktop\\MyGithub\\SpiderProjects\\Tripadvisor2\\log/scrapy_2018_11_20.log', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'Tripadvisor2.spiders', 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_MODULES': ['Tripadvisor2.spiders']}
+2018-11-20 15:03:29 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2018-11-20 15:03:29 [yuyan] INFO: Reading start URLs from redis key 'yuyan:start_urls' (batch size: 32, encoding: utf-8
+2018-11-20 15:03:29 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'Tripadvisor2.middlewares.Tripadvisor2DownloaderMiddleware',
+ 'Tripadvisor2.middlewares.SeleniumMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-11-20 15:03:29 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-11-20 15:03:29 [scrapy.middleware] INFO: Enabled item pipelines:
+['Tripadvisor2.pipelines.tripsitem.Tripadvisor2ImagePipeline',
+ 'Tripadvisor2.pipelines.tripsitem.Tripadvisor2Pipeline']
+2018-11-20 15:03:29 [scrapy.core.engine] INFO: Spider opened
+2018-11-20 15:03:30 [root] WARNING: 测试warning
+2018-11-20 15:03:30 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-11-20 15:03:30 [yuyan] INFO: Spider opened: yuyan
+2018-11-20 15:04:30 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)

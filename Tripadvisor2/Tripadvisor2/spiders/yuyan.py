@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import logging
 import re
 import time
 
@@ -40,6 +41,7 @@ class TripsSpider(spiders.RedisSpider):
             # time.sleep(2)
         # return self.next_requests()
         yield scrapy.Request(self.start_url)
+
     # 开始请求
     def parse(self, response):
         """
@@ -52,6 +54,7 @@ class TripsSpider(spiders.RedisSpider):
             计数 2
         """
         print('请求---', response.url)
+
         # 总评论数
         total_comment = response.xpath("//a[contains(@class,'pageNum last')]//text()").extract_first()
         for block in response.xpath("//div[contains(@class,'rev_wrap ui_columns is-multiline')]"):

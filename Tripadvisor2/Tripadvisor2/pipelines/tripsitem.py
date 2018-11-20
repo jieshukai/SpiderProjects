@@ -5,10 +5,11 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import json
+import logging
 import os
 
 import scrapy
-from scrapy import log
+# from scrapy import log
 from scrapy.exceptions import DropItem
 from scrapy.pipelines.images import ImagesPipeline
 from scrapy.utils.misc import arg_to_iter
@@ -23,6 +24,8 @@ class Tripadvisor2Pipeline(object):
     language = section.get('language')
 
     def open_spider(self, spider):
+        logging.warning('{}'.format('测试warning'))
+
         self.file = open(os.path.join(BASE_DIR, 'data/json/{}_{}.json'.format(self.name, self.language)), 'w',
                          encoding='utf-8')
         self.file.write('[\n')
@@ -81,5 +84,5 @@ class Tripadvisor2ImagePipeline(ImagesPipeline):
             item['image_paths'] = image_path
             print('图片下载成功', image_path)
         else:
-            log.msg('图片下载失败--{}'.format(item['image_urls']), level=log.WARNING)
+            logging.warning('图片下载失败--{}'.format(item['image_urls']))
         return item
