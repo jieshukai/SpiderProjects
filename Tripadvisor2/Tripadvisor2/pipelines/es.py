@@ -1,12 +1,8 @@
 import json
-import traceback
-
 import treq
 
 from twisted.internet import defer
 from scrapy.exceptions import NotConfigured
-from twisted.internet.error import ConnectError
-from twisted.internet.error import ConnectingCancelledError
 
 
 class EsWriter(object):
